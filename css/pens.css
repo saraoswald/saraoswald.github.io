@@ -1,0 +1,232 @@
+
+/*------------Baymax------------*/
+
+#baymax {
+  position:relative;
+  margin: 0 auto;
+  height: 600px;
+  width: 505px;
+  background: #222222;
+}
+
+#head {
+  height: 64px;
+  width: 90px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: -20px;
+  border-bottom: 5px solid #E0E0E0;
+  z-index: 3;
+  position: relative;
+}
+
+#eye, #eye:after {
+  width: 11px;
+  height: 13px;
+  background: #282828;
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  -moz-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+
+#eye:after {
+  content: '';
+  position: absolute;
+  left: 37px;
+  top: -5px;
+  -moz-transform: rotate(-16deg);
+  -ms-transform: rotate(-16deg);
+  -webkit-transform: rotate(-16deg);
+  transform: rotate(-16deg);
+}
+
+#mouth {
+  width: 33px;
+  height: 1.5px;
+  background: #282828;
+  position: relative;
+  left: 27px;
+  top: 13px;
+}
+
+#torso, #belly {
+  margin: 0 auto;
+  height: 200px;
+  width: 180px;
+  background: #fff;
+  border-radius: 50%;
+  border: 5px solid #E0E0E0;
+  border-top: none;
+  z-index: 5;
+}
+
+#belly {
+  height: 300px;
+  width: 240px;
+  margin-top: -140px;
+  z-index: 5;
+}
+
+#cover {
+  width: 180px;
+  background: #fff;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  border-radius: 50%;
+}
+
+#left-arm, #right-arm {
+  height: 270px;
+  width: 100px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  top: -350px;
+  left: 95px;
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  z-index: 0;
+}
+
+#right-arm {
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  left: 305px;
+  top: -620px;
+}
+
+#bigfingerl, #bigfingerr {
+  height: 50px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  top: 250px;
+  left: 50px;
+  transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+}
+
+#bigfingerr {
+  left: 32px;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+}
+
+#lilfingerl, #lilfingerr {
+  height: 30px;
+  width: 15px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  top: 195px;
+  left: 65px;
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+}
+
+#lilfingerr {
+  background: #fff;
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  top: 195px;
+  left: 22px;
+}
+
+/*----------Messages Logo----------*/
+#messages-logo{
+  background: #D8D8D8;
+  width:505px;
+  height:250px;
+}
+#notify{
+  font-family: sans-serif;
+  color:#fff;
+  text-align:center;
+  font-size:30px;
+}
+  #messages{
+    padding-top:20px;
+  }
+#bluebubble{
+  margin:0 auto;
+  position:relative;
+  top:30px;
+  width:150px;
+  height:130px;
+  border-radius:50%;
+  background: linear-gradient(#09E4FF,#4666FE);
+}
+#whitebubble{
+  width:90px;
+  height:80px;
+  position:relative;
+  border-radius:50%;
+  top:70px;
+  left:60px;
+  background: linear-gradient(#E1E3E4,#A5A8AC);
+}
+  #dot,#dotdot,#dotdotdot{
+    position:relative;
+    top:33px;
+    left:16px;
+    z-index:30;
+    width:14px;
+    height:14px;
+    background:#545454;
+    border-radius:50%;
+  }
+    #dotdot{
+      top:0px;
+      left:21px;
+    }
+      #dotdotdot{
+        top:-14px;
+        left: 42px;
+      }
+
+   #circle{
+     width:70px;
+     height:70px;
+     border-radius:50%;
+     position:relative;
+     top:-125px;
+     left:100px;
+     background:#f30808;
+     box-shadow: 0px 0px 5px #404040;
+   }
+
+/*------ What Color is it ------*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+#whatcolor{
+  font-family: 'Open Sans', sans-serif;
+  text-align:center;
+  color:#fff;
+  background:#000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#time{
+  font-size:70px;
+  padding:50px;
+  padding-bottom:30px;
+}
+
+#hex{
+  font-size:30px;
+}
