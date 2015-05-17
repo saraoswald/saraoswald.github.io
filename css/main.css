@@ -244,6 +244,13 @@ a{text-decoration:none;}
   text-align:center;
 }
 
+.cover{
+  width:400px;
+  height:465px;
+}
+.cover img{
+  width: 100%;
+}
 .cap{
   background:rgba(165,84,233,0.8);
   z-index:50;
