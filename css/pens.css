@@ -305,7 +305,7 @@
 
 /*------ Bobst -------*/
 #bobst {
-  background: url('http://saraoswald.github.io/files/bobst.svg') local center;
+  background: url('http://saraoswald.github.io/files/bobst.svg') scroll center;
   background-size:100px 60px;
 }
 
