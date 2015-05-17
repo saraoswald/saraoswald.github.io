@@ -81,7 +81,7 @@
   background: #222222;
 }
 
-#head {
+#bayhead {
   height: 64px;
   width: 90px;
   border-radius: 50%;
@@ -93,7 +93,7 @@
   position: relative;
 }
 
-#eye, #eye:after {
+#bayeye, #bayeye:after {
   width: 11px;
   height: 13px;
   background: #282828;
@@ -107,7 +107,7 @@
   transform: rotate(8deg);
 }
 
-#eye:after {
+#bayeye:after {
   content: '';
   position: absolute;
   left: 37px;
@@ -118,7 +118,7 @@
   transform: rotate(-16deg);
 }
 
-#mouth {
+#baymouth {
   width: 33px;
   height: 1.5px;
   background: #282828;
@@ -127,7 +127,7 @@
   top: 13px;
 }
 
-#torso, #belly {
+#baytorso, #baybelly {
   margin: 0 auto;
   height: 200px;
   width: 180px;
@@ -138,14 +138,14 @@
   z-index: 5;
 }
 
-#belly {
+#baybelly {
   height: 300px;
   width: 240px;
   margin-top: -140px;
   z-index: 5;
 }
 
-#cover {
+#baycover {
   width: 180px;
   background: #fff;
   height: 150px;
@@ -155,7 +155,7 @@
   border-radius: 50%;
 }
 
-#left-arm, #right-arm {
+#bayleft-arm, #bayright-arm {
   height: 270px;
   width: 100px;
   border-radius: 50%;
@@ -170,14 +170,14 @@
   z-index: 0;
 }
 
-#right-arm {
+#bayright-arm {
   transform: rotate(-20deg);
   -webkit-transform: rotate(-20deg);
   left: 305px;
   top: -620px;
 }
 
-#bigfingerl, #bigfingerr {
+#baybigfingerl, #baybigfingerr {
   height: 50px;
   width: 20px;
   border-radius: 50%;
@@ -189,13 +189,13 @@
   -webkit-transform: rotate(-50deg);
 }
 
-#bigfingerr {
+#baybigfingerr {
   left: 32px;
   transform: rotate(50deg);
   -webkit-transform: rotate(50deg);
 }
 
-#lilfingerl, #lilfingerr {
+#baylilfingerl, #baylilfingerr {
   height: 30px;
   width: 15px;
   border-radius: 50%;
@@ -207,7 +207,7 @@
   -webkit-transform: rotate(-40deg);
 }
 
-#lilfingerr {
+#baylilfingerr {
   background: #fff;
   transform: rotate(40deg);
   -webkit-transform: rotate(40deg);

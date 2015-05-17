@@ -3,8 +3,8 @@
   <title>Sara Linsley</title>
   <link type="text/css" rel="stylesheet" href="css/main.css">
   <link type="text/css" rel="stylesheet" href="css/pens.css">
+  <link type="text/css" rel="stylesheet" href="css/bee.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <style>
     .tile-container{
       width:660px;
@@ -49,25 +49,62 @@
           <p>This rendering of Baymax from the Disney movie <i>Big Hero 6</i> is drawn completely in CSS. <i>Click for the entire pen.</i></p>
         </a>
         <div id="baymax">
-            <div id="head">
-              <div id="eye"></div>
-              <div id="eye2"></div>
-              <div id="mouth"></div>
+            <div id="bayhead">
+              <div id="bayeye"></div>
+              <div id="bayeye2"></div>
+              <div id="baymouth"></div>
             </div>
-            <div id="torso"></div>
-            <div id="belly">
-              <div id="cover"></div>
+            <div id="baytorso"></div>
+            <div id="baybelly">
+              <div id="baycover"></div>
             </div>
-            <div id="left-arm">
-              <div id="bigfingerl"></div>
-              <div id="lilfingerl"></div>
+            <div id="bayleft-arm">
+              <div id="baybigfingerl"></div>
+              <div id="baylilfingerl"></div>
             </div>
-            <div id="right-arm">
-              <div id="bigfingerr"></div>
-              <div id="lilfingerr"></div>
+            <div id="bayright-arm">
+              <div id="baybigfingerr"></div>
+              <div id="baylilfingerr"></div>
             </div>
         </div>
       </div>
+      <div class="box" id="b">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/VYPqKE">
+          <h1>Animated Bee</h1>
+          <p>Bee, from Bee and Puppycat. Animated with SCSS and HAML. <i>Click for the entire pen.</i></p>
+        </a>
+        <div id='bcontainer'>
+          <div id='bee'>
+            <div id='face'>
+              <div id='head'>
+                <div id='eye'></div>
+              </div>
+              <div id='nose'></div>
+              <div id='mouth'></div>
+              <div id='ear'></div>
+            </div>
+            <div id='hairblob'></div>
+            <div id='headblob'></div>
+            <div id='neck'></div>
+            <div id='flip'></div>
+            <div id='backblob'></div>
+            <div id='chest'></div>
+            <div id='belly'></div>
+            <div id='lap'></div>
+            <div id='armr'></div>
+            <div id='arml'></div>
+            <div id='fore'></div>
+            <div id='shirtshad'></div>
+            <div id='shadow'></div>
+          </div>
+          <div id='flowy'>
+            <div id='blob1'></div>
+            <div id='blob2'></div>
+            <div id='blob3'></div>
+          </div>
+        </div>
+      </div>
+      <!--
       <div class="box">
         <a class="cap" href="http://codepen.io/saraoswald/pen/JojgKM">
           <h1>Yosemite Messages</h1>
@@ -106,7 +143,9 @@
            }
         </script>
       </div>
+    -->
     </div>
+
 
     <div class="row">
       <div class="box full" id="whatcolor">
@@ -116,30 +155,30 @@
         </a>
           <div id="time">00 : 00 : 00</div>
           <div id="hex">#000000</div>
-      </div>
-      <script>
-        function doTime(){
-          var date = new Date();
+        </div>
+        <script>
+          function doTime(){
+            var date = new Date();
 
-          var time = [date.getHours(),date.getMinutes(), date.getSeconds()];
+            var time = [date.getHours(),date.getMinutes(), date.getSeconds()];
 
-          for (i = 0; i < 3; i++){
-            if (time[i] < 10) time[i] = "0" + time[i];
+            for (i = 0; i < 3; i++){
+              if (time[i] < 10) time[i] = "0" + time[i];
+            }
+
+            var hex = "#";
+            for (i=0;i<3;i++) hex += time[i];
+
+            document.getElementById("time").innerHTML = time[0]+" : " + time[1] + " : " + time[2];
+
+
+            document.getElementById("hex").innerHTML = hex;
+            document.getElementById("whatcolor").style.background = hex;
+
+            setTimeout(function(){ doTime();}, 1000);
           }
 
-          var hex = "#";
-          for (i=0;i<3;i++) hex += time[i];
-
-          document.getElementById("time").innerHTML = time[0]+" : " + time[1] + " : " + time[2];
-
-
-          document.getElementById("hex").innerHTML = hex;
-          document.getElementById("whatcolor").style.background = hex;
-
-          setTimeout(function(){ doTime();}, 1000);
-        }
-
-      </script>
+        </script>
     </div>
     <div class="row">
       <div class="box" id="puppy">
