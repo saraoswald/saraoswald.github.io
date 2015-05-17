@@ -1,10 +1,18 @@
 body{
-  background:#CFCFCF;
+  background:#EEECEB;
   color:#333333;
   font-family: 'Lato', sans-serif;
   margin:0;
   padding:0;
 }
+a{
+  color:#00B9BD;
+  text-decoration:none;
+  font-style:italic;
+}
+  a:hover{
+    color:#333333;
+  }
 
 /*-----------NAV-----------*/
 .nav-header{
@@ -16,6 +24,7 @@ body{
   padding:10px 0 0 20px;
   color:#333;
   margin:0;
+  font-style:normal;
 }
 
 nav{
@@ -40,6 +49,7 @@ nav{
       color:#333;
       font-weight:bold;
       margin:0;
+      font-style:normal;
     }
     nav li a:hover{
       color:#A554E9;
@@ -137,6 +147,7 @@ a{text-decoration:none;}
     color:#fff;
     background:rgba(50,50,50,0.7);
     transition: color 0.3 ease, background 0.2 ease;
+    font-style:normal;
   }
     .title ul{
       font-weight:normal;
@@ -230,6 +241,7 @@ a{text-decoration:none;}
 
 .full{
   width:1030px;
+  text-align:center;
 }
 
 .cap{
@@ -242,6 +254,7 @@ a{text-decoration:none;}
   padding:10px;
   transition: bottom 0.5s;
   -webkit-transition: bottom 0.5s;
+  font-style:normal;
 }
 
   .cap h1,.cap p{

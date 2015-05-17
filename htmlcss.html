@@ -1,0 +1,249 @@
+<!doctype html>
+<head>
+  <title>Sara Linsley</title>
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <link type="text/css" rel="stylesheet" href="css/pens.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <style>
+    .tile-container{
+      width:660px;
+    }
+    .tile{
+      margin-left:10px;
+      margin-right:10px;
+    }
+  </style>
+</head>
+<body onLoad="doTime()" >
+  <nav>
+    <a href="index.html"><div class="nav-header">
+      Sara Linsley
+    </div></a>
+    <ul>
+      <li><a href="works.html">Works</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="pens-nav">
+      <a href="indd.html">
+        <div class="pens-nav-tile-sm">
+          <div id="html"><img src="files/pp1.png"></div>
+          <div class="pens-nav-title">InDesign</div>
+        </div>
+      </a>
+      <a href="psd.html">
+        <div class="pens-nav-tile-sm">
+          <div id="photoshop"><img src="files/enterprise.jpg"></div>
+          <div class="pens-nav-title">Photoshop</div>
+        </div>
+      </a>
+      <div class="pens-nav-tile">
+        <div class="pens-nav-title active">HTML/CSS</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/vEYxrq">
+          <h1>Baymax</h1>
+          <p>This rendering of Baymax from the Disney movie <i>Big Hero 6</i> is drawn completely in CSS. <i>Click for the entire pen.</i></p>
+        </a>
+        <div id="baymax">
+            <div id="head">
+              <div id="eye"></div>
+              <div id="eye2"></div>
+              <div id="mouth"></div>
+            </div>
+            <div id="torso"></div>
+            <div id="belly">
+              <div id="cover"></div>
+            </div>
+            <div id="left-arm">
+              <div id="bigfingerl"></div>
+              <div id="lilfingerl"></div>
+            </div>
+            <div id="right-arm">
+              <div id="bigfingerr"></div>
+              <div id="lilfingerr"></div>
+            </div>
+        </div>
+      </div>
+      <div class="box">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/JojgKM">
+          <h1>Yosemite Messages</h1>
+          <p>Updated Messages icon for OSX Yosemite made with HTML,CSS, and Javascript. <i>Click for the entire pen.</i></p>
+        </a>
+        <div id="messages-logo">
+          <div id="bluebubble" onclick="moar()">
+            <div id="pointyend">
+              <div id="curve"></div>
+            </div>
+            <div id="whitebubble">
+              <div id="dot">
+                <div id="dotdot"></div>
+                <div id="dotdotdot"></div>
+              </div>
+            </div>
+            <div id="notify">
+              <div id="circle">
+                <p id="messages"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          var messages = Math.floor((Math.random()*10)+1);
+          document.getElementById("messages").innerHTML = messages;
+
+          function moar(){
+            var mess = document.getElementById("messages").innerHTML
+            if(mess > 1){
+              mess--;
+              document.getElementById("messages").innerHTML = mess;
+            } else{
+              document.getElementById("notify").innerHTML = "";
+            }
+           }
+        </script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="box full" id="whatcolor">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/yyOqoo" style="padding-bottom:30px;">
+          <h1>What color is it?</h1>
+          <p>Practice recreation of What Color is It. <i>Click for the entire pen.</i></p>
+        </a>
+          <div id="time">00 : 00 : 00</div>
+          <div id="hex">#000000</div>
+      </div>
+      <script>
+        function doTime(){
+          var date = new Date();
+
+          var time = [date.getHours(),date.getMinutes(), date.getSeconds()];
+
+          for (i = 0; i < 3; i++){
+            if (time[i] < 10) time[i] = "0" + time[i];
+          }
+
+          var hex = "#";
+          for (i=0;i<3;i++) hex += time[i];
+
+          document.getElementById("time").innerHTML = time[0]+" : " + time[1] + " : " + time[2];
+
+
+          document.getElementById("hex").innerHTML = hex;
+          document.getElementById("whatcolor").style.background = hex;
+
+          setTimeout(function(){ doTime();}, 1000);
+        }
+
+      </script>
+    </div>
+    <div class="row">
+      <div class="box" id="puppy">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/gbbNwx">
+          <h1>Puppycat</h1>
+          <p>Puppycat, from the animation Bee and Puppycat, rendered in CSS and HTML. <i>Click for the entire pen.</i></p>
+        </a>
+        <div id="puppycat">
+          <div id="phead">
+            <div id="pears">
+              <div id="pear1">
+                <div id="pe1center">
+                  <div id="pe1curvetop"></div>
+                  <div id="pe1pink"></div>
+                </div>
+              </div>
+              <div id="pear2">
+                <div id="pe2center">
+                <div id="pe2pink"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="pface">
+              <div id="peyebrow1">
+                <div id="peyebrow2"></div>
+              </div>
+              <div id="peye1">
+                <div id="peye2"></div>
+              </div>
+              <div id="pnose"></div>
+              <div id="pmouth"></div>
+            </div>
+          </div>
+
+          <div id="pbell">
+            <div id="pring"></div>
+            <div id="pcollar1"></div>
+            <div id="pcollar2"></div>
+          </div>
+
+          <div id="pbutt">
+            <div id="pleg4">
+              <div class="legshad"></div>
+              <div class="toe1">
+                <div class="toe2"></div>
+              </div>
+            </div>
+            <div id="leg4cov"></div>
+            <div id="buttb"></div>
+            <div id="pleg3">
+              <div class="legshad"></div>
+              <div class="toe1">
+                <div class="toe2"></div>
+              </div>
+            </div>
+          </div>
+          <div id="pleg1">
+            <div class="legshad"></div>
+            <div class="toe1">
+            	<div class="toe2"></div>
+            </div>
+          </div>
+          <div id="pleg2">
+            <div class="legshad"></div>
+            <div class="toe1">
+            	<div class="toe2"></div>
+            </div>
+          </div>
+          <div id="tail">
+            <div id="tailshad"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/kGFLx" style="padding-bottom:30px">
+          <h1>Shy Ghost</h1>
+          <p>The ghost is really shy if you hover too close. <i>Click for the entire pen.</i></p>
+        </a>
+        <div id="spooky">
+          <div id="ghost">
+            <div id="left-eye"></div>
+            <div id="right-eye"></div>
+            <div id="blush"></div>
+            <div id="blush2"></div>
+          </div>
+          <div id="wiggle">
+            <div id="wiggle2"></div>
+            <div id="wiggle3"></div>
+            <div id="wiggle4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="box full" id="bobst">
+        <a class="cap" href="http://codepen.io/saraoswald/pen/myLBxE" style="padding-bottom:30px">
+          <h1>Bobst Library Floor</h1>
+          <p>SVG of the tessellation on the floor of NYU Bobst Library. <i>Click for the entire pen.</i></p>
+        </a>
+      </div>
+    </div>
+  </div>
+<div id="bottom"></div>
+</body>
