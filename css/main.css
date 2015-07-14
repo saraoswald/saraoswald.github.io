@@ -192,7 +192,7 @@ a{text-decoration:none;}
       padding-left:10px;
     }
       #coding li:hover{
-        background: rgb(180,180,180);
+        background: rgba(0,0,0,0.15);
         transition: background 0.4s ease;
       }
         #coding li[id="coding-label"]:hover,
