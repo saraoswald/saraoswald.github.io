@@ -190,15 +190,16 @@ a{text-decoration:none;}
   }
     #coding li{
       padding-left:10px;
+      transition: border 0.3s ease;
     }
-      #coding li:hover{
-        background: rgba(0,0,0,0.15);
-        transition: background 0.4s ease;
+      #coding li:hover .xp{
+        border-left:30px solid tomato;
+        cursor:default;
+        transition: border 0.3s ease;
       }
         #coding li[id="coding-label"]:hover,
         #coding li{
-          background: none;
-          transition: background 0.4s ease;
+          transition: border 0.4s ease;
         }
 
   #coding-title{
