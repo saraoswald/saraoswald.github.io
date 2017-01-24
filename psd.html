@@ -4,7 +4,7 @@
   <link type="text/css" rel="stylesheet" href="css/main.css">
   <link type="text/css" rel="stylesheet" href="css/pens.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <style>
   .tile-container{
     width:660px;
@@ -16,9 +16,11 @@
   </style>
 </head>
   <nav>
-    <a href="index.html"><div class="nav-header">
-      Sara Linsley
-    </div></a>
+    <a href="index.html">
+      <div class="nav-header">
+        Sara Linsley
+      </div>
+    </a>
     <ul>
       <li><a href="works.html">Works</a></li>
     </ul>
@@ -27,7 +29,9 @@
     <div class="pens-nav">
       <a href="indd.html">
         <div class="pens-nav-tile-sm">
-          <div id="photoshop"><img src="files/pp1.png"></div>
+          <div id="photoshop">
+            <img src="files/pp1.png">
+          </div>
           <div class="pens-nav-title">InDesign</div>
         </div>
       </a>
@@ -36,21 +40,102 @@
       </div>
       <a href="htmlcss.html">
         <div class="pens-nav-tile-sm">
-          <div id="html"><img src="files/bee.png"></div>
+          <div id="html">
+            <img src="files/bee.png">
+          </div>
           <div class="pens-nav-title">HTML/CSS</div>
         </div>
       </a>
     </div>
     <div class="row">
-      <div class="box cover">
+      <div class="box half-width has-modal">
         <a class="cap">
           <h1>Manga Retouching</h1>
           <p>1) original Japanese art, 2) retouched image with <br />Photoshop, 3) text lettered with InDesign</p>
         </a>
         <img src="files/psd1.png">
       </div>
+      <div class="box half-width has-modal">
+        <a class="cap cap_one-line">
+          <h1>SFX</h1>
+          <p>Placed SFX translation next to original art</p>
+        </a>
+        <img src="files/psd2-hd.png">
+      </div>
     </div>
-
   </div>
   <div id="bottom"></div>
+  <div id="overlay"> 
+    <div class="modal"></div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('.box').click(function(e){
+        fillModal(".modal", $(e.currentTarget).find('img'));
+        $("#overlay").toggle();
+      });
+
+      //  handle close of modal
+      $('#overlay').click(function(e){$(e.target).toggle()});
+      $('.modal').click(function(e){e.stopPropagation()});
+      $(document).keydown(function(e){
+          if(e.keyCode == 27 && isModal()) closeModals();
+          else if(isModal() && (e.keyCode == 37 || e.keyCode == 39)){
+            e.preventDefault();
+            fillModal(e.currentTarget, getNeighbor(e.currentTarget, (e.keyCode == 37)?'left':'right'));
+          }
+        });
+      $('.modal').on('change',function(){
+          console.log('changed');
+          $('#overlay').css('height',$('.modal').outerHeight()+100);
+        });
+
+      function closeModals(){
+        $('#overlay').hide();
+        $('.modal').empty();
+      };
+
+      function fillModal(target, content){
+        var img = $('<img />',{
+          'src': content.attr('src'),
+          'class': 'modal-img'
+        })[0];
+
+        $('.modal').empty();
+        $('.modal').append([img]);
+      };
+
+      function isModal(){
+        return $('#overlay').css('display') != "none";
+      };
+
+      function getNeighbor(target, direction){
+        var index = getCurrModalIndex(),
+          imgs = $('.box').find('img');
+
+        if((direction == 'left' && index > 0) || (direction == 'right' && index < imgs.length)){
+          (direction == 'left') ? index-- : index++;
+        }
+
+        return $('<img />',{
+          'src': imgs[index].src,
+          'class': 'modal-img'
+        });
+      }
+
+      function getCurrModalIndex(){
+        try{
+            var imgs = $('.box').find('img');
+            var curr = $('.modal').find('img')[0];
+            var res,i;
+            for(i=0;i<imgs.length;i++){
+              if(imgs[i].src == curr.src) res = i;
+            }
+            return res;
+          } catch(e){}; 
+      }
+
+    });
+
+  </script>
 </body>
