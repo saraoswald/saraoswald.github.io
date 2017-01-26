@@ -2,14 +2,6 @@
   background: #0D0630;
 }
 
-#b .cap{
-  bottom:-30px;
-}
-  #b .cap:hover{
-      bottom:0px;
-      transition: position 0.3 ease;
-    }
-
 #bcontainer {
   overflow: hidden;
   position:relative;

@@ -59,6 +59,7 @@ nav{
 a{text-decoration:none;}
 .container{
   min-height:50%;
+  width:90%;
   margin:0 auto;
   padding-bottom:50px;
 }
@@ -332,7 +333,10 @@ a{text-decoration:none;}
     margin:0;
     color:#fff;
   }
-
+    .box .cap p{
+      padding-top:10px;
+      max-width:90%;
+    }
     .box .cap:hover{
       bottom:0px;
       transition: position 0.3 ease;
@@ -341,8 +345,6 @@ a{text-decoration:none;}
   .box .cap_one-line{
     bottom:-30px;
   }
-
-.box .cap p{padding-top:10px;}
 
   .modal .cap{
     background:rgba(0,0,0,0);
