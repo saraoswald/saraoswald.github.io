@@ -3,7 +3,6 @@
   <title>Sara Linsley</title>
   <link type="text/css" rel="stylesheet" href="css/main.css">
   <link type="text/css" rel="stylesheet" href="css/pens.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <style>
   .tile-container{
@@ -74,17 +73,19 @@
 
       //  handle close of modal
       $('#overlay').click(function(e){$(e.target).toggle()});
-      $('.modal').click(function(e){e.stopPropagation()});
+      $('.modal').click(function(e){
+        e.stopPropagation();
+        if(e.target.className == 'flipper right' || e.target.className == 'flipper left'){
+          fillModal(e.currentTarget, getNeighbor(e.currentTarget, (e.target.className == 'flipper left')?'left':'right'));
+        }
+      });
+
       $(document).keydown(function(e){
           if(e.keyCode == 27 && isModal()) closeModals();
           else if(isModal() && (e.keyCode == 37 || e.keyCode == 39)){
             e.preventDefault();
             fillModal(e.currentTarget, getNeighbor(e.currentTarget, (e.keyCode == 37)?'left':'right'));
           }
-        });
-      $('.modal').on('change',function(){
-          console.log('changed');
-          $('#overlay').css('height',$('.modal').outerHeight()+100);
         });
 
       function closeModals(){
@@ -93,13 +94,25 @@
       };
 
       function fillModal(target, content){
+        var flippers = 
+          $('<div />',{
+            'class': 'flippers'
+          });
+          
+        flippers.append([$('<div />',{
+            'class': 'flipper left'
+          }),
+          $('<div />',{
+            'class': 'flipper right'
+          })]);
+
         var img = $('<img />',{
           'src': content.attr('src'),
           'class': 'modal-img'
         })[0];
 
         $('.modal').empty();
-        $('.modal').append([img]);
+        $('.modal').append([img,flippers]);
       };
 
       function isModal(){
