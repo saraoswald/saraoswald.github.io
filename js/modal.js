@@ -27,7 +27,6 @@ $(document).ready(function(){
   };
 
   function fillModal(target, content){
-    console.log(content);
     var flippers = 
       $('<div />',{
         'class': 'flippers'
