@@ -2,77 +2,101 @@
 <head>
   <title>Sara Linsley</title>
   <link type="text/css" rel="stylesheet" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
   <nav>
-    <a href="index.html">
-      <div class="nav-header">
-        Sara Linsley
-      </div>
-    </a>
   </nav>
-  <div class="container">
-    <div class="jumbo">
-      <h1>Hi, I'm Sara.</h1>
-      <p>I'm an NYC-based dev who likes to make things. Front-end projects are my personal favorites, but I like designing and developing for all types of media.</p>
-      <div id="cred">
-        <a href="http://codepen.io/saraoswald/">
-          <img src="files/codepen-logo.png" height="30px">
-        </a>
-        <a href="https://twitter.com/saraoswald_">
-          <img src="files/twitter-logo.png" height="30px">
-        </a>
-        <a href="https://www.linkedin.com/in/saralinsley">
-          <img src="files/linkedin-logo.png" height="30px">
-        </a>
-      </div>
+  <div class="name">Sara Linsley</div>
+    <div class="nav">
+      <a class="nav_button" href="#developer">
+        Developer
+      </a>
+      <a class="nav_button" href="#designer">
+        Designer
+      </a>
+      <a class="nav_button" href="#letterer">
+        Letterer
+      </a>
     </div>
-    <div class="tile-container">
-      <a href="indd.html">
-        <div class="tile">
-          <div id="indesign"><img src="files/pp1.png"></div>
-          <div class="title">InDesign<br>
-            <ul>
-              <li>Cover design</li><li>Lettering</li><li>Ad design</li>
-            </ul>
-          </div>
-        </div>
-      </a>
-      <a href="psd.html">
-        <div class="tile">
-          <div id="photoshop"><img src="files/enterprise.jpg"></div>
-          <div class="title">Photoshop<br>
-            <ul>
-              <li>Editing</li><li>Retouching</li>
-            </ul>
-          </div>
-        </div>
-      </a>
-      <a href="htmlcss.html">
-        <div class="tile">
-          <div id="html"><img src="files/bee.png"></div>
-          <div class="title">HTML/CSS<br>
-            <ul>
-              <li>Building</li><li>Drawing</li>
-            </ul>
-          </div>
-        </div>
-      </a>
+  <div class="content-cont" id="developer">
+    <section class="content-box">
+      <h1>Computer Vision w/ Trees</h1>
+      <h2>Python  -  OpenCV - MatPlotLib</h2>
+      <p>Using the computer vision library OpenCV, we developed a method for reliabily detecting tree-like structures from images using SIFT feature detection and brute force matching.</p>
+      <a href="https://github.com/saraoswald/Tree-Re-ID"><img src="files\tree-image-1.png"></a>
+      <p class="caption">Local minima in the graphs correspond to candidates for tree positions</p>
+      <p>Detecting positions of trees is difficult primarily because of the complex nature of the backgrounds of these images, so we used several methods to simply the files for data collection.</p>
+      <a href="https://github.com/saraoswald/Tree-Re-ID"><img src="files\tree-image-2.png"></a>
+      <p class="caption">Original image, k-means clustering (k=2), and Sobel operator edge detection</p>
+      <p class="centered"><a href="https://github.com/saraoswald/Tree-Re-ID">Github repo here</a></p>
+    </section>
+    <section class="content-box">
+      <h1>CSS-only Character Animation</h1>
+      <h2>CSS  -  SCSS  -  HAML</h2>
+      <p>Creating CSS animations is not only good practice -- it's real good fun.</p>
 
-      <div id="coding">
-        <h1 id="coding-title"><span class="blue">< / ></span> Skills</h2>
-          <ul>
-            <li id="coding-label">Experience</li>
-            <li>HTML/CSS<div class="xp" style="width:120px;"></div></li>
-            <li>Java<div class="xp" style="width:90px;"></div></li>
-            <li>Javascript<div class="xp" style="width:100px;"></div></li>
-            <li>SQL<div class="xp" style="width:100px;"></div></li>
-            <li>PHP<div class="xp" style="width:65px;"></div></li>
-            <li>Python<div class="xp" style="width:100px;"></div></li>
-            <li>Ruby<div class="xp" style="width:40px;"></div></li>
-          </ul>
-      </div>
-    </div>
+      <p data-height="300" data-theme-id="9662" data-slug-hash="VYPqKE" data-default-tab="result" data-user="saraoswald" data-embed-version="2" data-pen-title="Bee" class="codepen">See the Pen <a href="http://codepen.io/saraoswald/pen/VYPqKE/">Bee</a> by Sara Linsley (<a href="http://codepen.io/saraoswald">@saraoswald</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+      <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      <p class="caption">Bee, from Bee and Puppycat</p>
+
+      <p data-height="300" data-theme-id="9662" data-slug-hash="qrOPQO" data-default-tab="result" data-user="saraoswald" data-embed-version="2" data-pen-title="Tiki" class="codepen">See the Pen <a href="http://codepen.io/saraoswald/pen/qrOPQO/">Tiki</a> by Sara Linsley (<a href="http://codepen.io/saraoswald">@saraoswald</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+      <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      <p class="caption">My rescue puppy, Tiki</p>
+
+      <p data-height="280" data-theme-id="9662" data-slug-hash="RgbLRp" data-default-tab="result" data-user="saraoswald" data-embed-version="2" data-pen-title="Single-element animated cassette" class="codepen">See the Pen <a href="https://codepen.io/saraoswald/pen/RgbLRp/">Single-element animated cassette</a> by Sara Linsley (<a href="https://codepen.io/saraoswald">@saraoswald</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+      <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      <p class="caption">Cassette using a single HTML element with a million "gradients" plastered on top of it</p>
+
+      <p class="centered"><a href="https://codepen.io/saraoswald/">Explore more here</a></p>
+    </section>
   </div>
-  <div id="bottom"></div>
+
+  <div class="content-cont" id="designer">
+    <section class="content-box">
+      <h1>Print Cover Art</h1>
+      <p>Cover designed for high school newspaper, featuring the cover story I wrote. Created using InDesign.</p>
+      <img src="files\pp1.png">
+    </section>
+  </div>
+
+  <div class="content-cont" id="letterer">
+    <section class="content-box">
+      <h1>Manga Retouching</h1>
+      <p>Part of localizing Japanese comics is Photoshopping all of the non-English elements off the page while making sure that the integrity of the art remains. This can range from simple retouches to complete reconstruction, depending on the series.</p>
+      <img src="files\manga-1.png">
+      <p class="caption">Notice how the border on the bottom bubble had to be redrawn</p>
+    </section>
+    <section class="content-box inverted">
+      <h1>Series I've worked on</h1>
+      <p>
+        <ul>
+          <li><a href="http://www.penguinrandomhouse.com/books/251310/ldk-1-by-ayu-watanabe/" target="_blank">
+          LDK 1 - 10</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/226969/the-wallflower-32-by-tomoko-hayakawa/" target="_blank">
+            The Wallflower 32 - 36</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/248966/yamada-kun-and-the-seven-witches-1-by-miki-yoshikawa/" target="_blank">
+            Yamada-kun and the Seven Witches 1 - 14</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/547062/that-wolf-boy-is-mine-1-by-yoko-nogiri/" target="_blank">
+            That Wolf-Boy is Mine! 1 - 4</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/549844/spoof-on-titan-1-attack-on-titan-by-hounori/" target="_blank">
+            Spoof on Titan 1 - 2</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/535997/livingstone-3-by-tomohiro-maekawa-and-jinsei-kataoka/" target="_blank">
+            Livingstone 3</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/539946/forget-me-not-3-by-nao-emoto-created-by-mag-hsu/" target="_blank">
+            Forget Me Not 3 - 4</a></li>
+          <li><a href="http://www.penguinrandomhouse.com/books/555974/waiting-for-spring-1-by-anashin/9781632365163/" target="_blank">Waiting for Spring 1</a></li>
+        </ul>
+      </p>
+    </section>
+  </div>
+
+  <script> 
+  $('.nav_button').on('click',function(e){
+    $('.no_content').hide();
+    $('.nav_button').removeClass('active');
+    $(e.target).addClass('active')
+  });
+
+  </script>
 </body>
