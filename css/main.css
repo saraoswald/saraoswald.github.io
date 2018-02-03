@@ -23,6 +23,7 @@ body{
   text-align: center;
   font-size: 52px;
   margin-top: 20px;
+  animation: float 5s ease-in-out infinite;
 }
 
 section, .nav{
@@ -43,7 +44,7 @@ section, .nav{
   color: #EA4A88;
   padding: 12px;
   border-radius: 20px;
-  margin-right: 10px;
+  margin-right: 25px;
   position: relative;
   font-weight: 700;
 }
@@ -85,10 +86,10 @@ section, .nav{
   display: flex;
 }
 section.content-box{
-  padding: 10px 30px 40px 20px;
+  padding: 20px;
   margin-right: 20px;
   margin-top: 15px;
-  max-width: 450px;
+  max-width: 600px;
   min-width: 300px;
   border-radius: 0 20px;
   min-height: 200px;
@@ -136,17 +137,22 @@ section.content-box{
 h1,
 h2,
 h3,
-p{
+p {
   padding: 0;
   margin: 0;
 }
 
-a{
+h1 { line-height: 1em; }
+
+a {
   color: #B79DEB;
   font-weight: bolder;
   text-decoration: none;
   text-transform: uppercase;
 }
+  a:hover {
+    color: #EA4A88;
+  }
 
 .centered{
   text-align: center;
@@ -171,6 +177,9 @@ p a:before, p a:after{
   border-radius: 10px;
   min-height: 150px;
 }
+  .about-me h1 {
+    margin-bottom: 5px;
+  }
   .about-me .photo img{
     width: 100px;
     height: 100px;
@@ -208,7 +217,7 @@ p a:before, p a:after{
         max-width: 100%;
       }
       body .nav_button{
-        padding: 2%;
+        padding: 2.3%;
       }
       body .nav_button, body .nav_button:not(.active):before{
         border-radius: 40px;
@@ -223,4 +232,17 @@ p a:before, p a:after{
         font-size: 0.6em;
       }
 
+}
+
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
