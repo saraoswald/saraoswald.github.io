@@ -176,6 +176,7 @@ p a:before, p a:after{
   border: 2px solid #fff;
   border-radius: 10px;
   min-height: 150px;
+  box-shadow: 5px 5px #fff;
 }
   .about-me h1 {
     margin-bottom: 5px;
