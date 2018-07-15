@@ -32,7 +32,6 @@ section, .nav{
 }
 .nav{
   margin: 20px auto 20px auto;
-  max-width: 40%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -42,11 +41,12 @@ section, .nav{
   background: #fff;
   text-decoration: none;
   color: #EA4A88;
-  padding: 12px;
+  padding: 14px 20px;
   border-radius: 20px;
   margin-right: 25px;
   position: relative;
   font-weight: 700;
+  cursor: pointer;
 }
 
   .nav_button:active,
@@ -68,21 +68,25 @@ section, .nav{
     height: 100%;
     border-radius: 20px;
     background: #e7dbeb;
-
     z-index: -1;
   }
+  .nav:not(.active) .nav_button {
+    font-size: 2em;
+    padding: 0.4em 0.8em;
+    border-radius: 30px;
+  }
+  .nav:not(.active) .nav_button:before {
+    border-radius: 30px;
+  }
 
-
+.hidden {
+  display: none !important;
+}
 .content-cont{
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  display: none;
-}
-#developer:target,
-#designer:target,
-#letterer:target{
   display: flex;
 }
 section.content-box{
@@ -172,14 +176,14 @@ p a:before, p a:after{
 }
 .about-me > div{
   color: #fff;
-  padding: 4% 5%;
+  padding: 4% 5% 5% 4%;
   border: 2px solid #fff;
   border-radius: 10px;
   min-height: 150px;
   box-shadow: 5px 5px #fff;
 }
   .about-me h1 {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
   .about-me .photo img{
     width: 100px;
@@ -214,20 +218,36 @@ p a:before, p a:after{
       body .content-box{
         max-width: 90%;
       }
+      .name {
+        font-size: 100px;
+      }
       body .nav{
         max-width: 100%;
       }
       body .nav_button{
         padding: 2.3%;
+        font-size: 0.8em !important;
       }
       body .nav_button, body .nav_button:not(.active):before{
         border-radius: 40px;
       }
       body .about-me{
         width: 90%;
+        margin: 1em;
+      }
+      body .about-me h1{
+        font-size: 70px;
       }
       body .about-me p{
-        font-size: 0.6em
+        font-size: 0.5em;
+      }
+      body .about-me .photo img{
+        height: 200px;
+        width: 200px;
+      }
+      .about-me .social img {
+        height: 10%;
+        width: 10%;
       }
       body .content-box p, body .content-box h2, body .content-box .caption{
         font-size: 0.6em;
@@ -245,5 +265,14 @@ p a:before, p a:after{
   }
   100% {
     transform: translatey(0px);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    font-size: 32px;
+  }
+  100% {
+    font-size: 18px;
   }
 }
