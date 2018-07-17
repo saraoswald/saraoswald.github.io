@@ -71,12 +71,12 @@ section, .nav{
     z-index: -1;
   }
   .nav:not(.active) .nav_button {
-    font-size: 2em;
+    font-size: 1.4em;
     padding: 0.4em 0.8em;
-    border-radius: 30px;
+    border-radius: 18px;
   }
   .nav:not(.active) .nav_button:before {
-    border-radius: 30px;
+    border-radius: 18px;
   }
 
 .hidden {
@@ -90,7 +90,7 @@ section, .nav{
   display: flex;
 }
 section.content-box{
-  padding: 20px;
+  padding: 25px 20px;
   margin-right: 20px;
   margin-top: 15px;
   max-width: 600px;
@@ -137,6 +137,9 @@ section.content-box{
       color:#fff;
     }
 
+  .content-box ul {
+    margin-top: 0px;
+  }
 
 h1,
 h2,
@@ -146,7 +149,10 @@ p {
   margin: 0;
 }
 
-h1 { line-height: 1em; }
+h1 { 
+  line-height: 1em;
+  padding-bottom: 15px;
+}
 
 a {
   color: #B79DEB;
