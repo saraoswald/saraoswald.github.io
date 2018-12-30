@@ -121,7 +121,6 @@ section, .nav{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  display: flex;
 }
 section.content-box{
   padding: 25px 20px;
