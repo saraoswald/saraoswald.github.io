@@ -3,8 +3,6 @@
 html,
 body{
   width: 100%;
-  height: 100%;
-  max-height: 100%;
   margin: 0;
   position: absolute;
   text-transform: uppercase;
@@ -16,6 +14,42 @@ body{
   font-size: 18px;
   background-attachment: fixed;
 }
+.overlay:not(.active){ display: none; }
+.overlay.active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+}
+  .overlay.active > div {
+    max-width: 67%;
+    width: fit-content;
+    position: relative;
+    background: #fff;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  .close-overlay {
+    outline: none;
+    position: absolute;
+    width: 1.5em;
+    top: 8px;
+    right: 11px;
+    font-size: 1em;
+    background: #fff;
+    color: #EA4A88;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #EA4A88;
+    box-shadow: 3px 3px #EA4A88;
+  }
+  .overlay-content img{
+    width: 100%;
+  }
+  .has-overlay {
+    cursor: pointer;
+  }
 
 .name{
   font-weight: 700;
@@ -232,14 +266,27 @@ p a:before, p a:after{
       }
       body .nav_button{
         padding: 2.3%;
-        font-size: 0.8em !important;
       }
-      body .nav_button, body .nav_button:not(.active):before{
+      .nav_button.active {
+        border-width: 5px;
+      }
+      body .nav_button, 
+      body .nav_button:not(.active):before,
+      .nav:not(.active) .nav_button,
+      .nav:not(.active) .nav_button:before {
         border-radius: 40px;
+      }
+      .nav:not(.active) .nav_button {
+        font-size: 52px;
+        padding: 2.3%;
       }
       body .about-me{
         width: 90%;
         margin: 1em;
+      }
+      .about-me > div {
+        border-width: 6px;
+        box-shadow: 8px 8px #fff;
       }
       body .about-me h1{
         font-size: 70px;
@@ -257,6 +304,13 @@ p a:before, p a:after{
       }
       body .content-box p, body .content-box h2, body .content-box .caption{
         font-size: 0.6em;
+      }
+      .overlay.active > div {
+        max-width: 99%;
+        width: inherit;
+      }
+      .close-overlay {
+        border-width: 4px;
       }
 
 }
