@@ -112,6 +112,37 @@ section, .nav{
   .nav:not(.active) .nav_button:before {
     border-radius: 18px;
   }
+.nav.active .click-me {display:none;}
+.click-me {
+  background: #C4A6CF;
+  color: #fff;
+  padding: 5px 10px 8px 10px;
+  height: max-content;
+  vertical-align: middle;
+  line-height: 0.8em;
+  font-size: 0.8em;
+  text-transform: lowercase;
+  position: absolute;
+  margin-top: 68px;
+  border-radius: 3px;
+  box-shadow: 2px 2px white;
+}
+  .click-me:before, .click-me:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #C4A6CF;
+    top: -15px;
+    left: 6px;
+  }
+  .click-me:before {
+    border-bottom: 8px solid white;
+    left: 8px;
+    top: -15px;
+    z-index:-1;
+  }
 
 .hidden {
   display: none !important;
@@ -275,9 +306,17 @@ p a:before, p a:after{
       .nav:not(.active) .nav_button:before {
         border-radius: 40px;
       }
+      .nav:not(.active) {
+        margin-bottom: 2.5em;
+      }
       .nav:not(.active) .nav_button {
         font-size: 52px;
         padding: 2.3%;
+      }
+      .click-me {
+        margin-top: 130px;
+        padding: 0.5em;
+        box-shadow: 6px 6px white;
       }
       body .about-me{
         width: 90%;
