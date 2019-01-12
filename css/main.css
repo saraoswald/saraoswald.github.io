@@ -9,7 +9,7 @@ body{
 }
 
 body{
-  background: linear-gradient(to bottom, #EA4A88, #C4A6CF);
+  background: linear-gradient(to bottom, #444, #333);
   font-family: 'Dosis', sans-serif;
   font-size: 18px;
   background-attachment: fixed;
@@ -114,7 +114,7 @@ section, .nav{
   }
 .nav.active .click-me {display:none;}
 .click-me {
-  background: #C4A6CF;
+  background: #EA4A88;
   color: #fff;
   padding: 5px 10px 8px 10px;
   height: max-content;
@@ -133,7 +133,7 @@ section, .nav{
     height: 0px;
     position: absolute;
     border: 8px solid transparent;
-    border-bottom: 8px solid #C4A6CF;
+    border-bottom: 8px solid #EA4A88;
     top: -15px;
     left: 6px;
   }
