@@ -340,9 +340,6 @@ p a:before, p a:after{
         height: 10%;
         width: 10%;
       }
-      body .content-box p, body .content-box h2, body .content-box .caption{
-        font-size: 0.6em;
-      }
       .overlay.active > div {
         max-width: 99%;
         width: inherit;
