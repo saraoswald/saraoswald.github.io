@@ -1,17 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
-
 html,
 body{
   width: 100%;
   margin: 0;
   position: absolute;
-  text-transform: uppercase;
 }
 
 body{
-  background: linear-gradient(to bottom, #444, #333);
-  font-family: 'Dosis', sans-serif;
-  font-size: 18px;
+  background: #fff;
+  font-family: 'fira-sans', sans-serif;
   background-attachment: fixed;
 }
 .overlay:not(.active){ display: none; }
@@ -40,9 +36,8 @@ body{
     background: #fff;
     color: #EA4A88;
     cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid #EA4A88;
-    box-shadow: 3px 3px #EA4A88;
+    border: 2px solid #EA4A88;
+    box-shadow: 4px 4px #EA4A88;
   }
   .overlay-content img{
     width: 100%;
@@ -53,11 +48,11 @@ body{
 
 .name{
   font-weight: 700;
-  color: #fff;
+  font-style: italic;
+  color: #333;
   text-align: center;
   font-size: 52px;
   margin-top: 20px;
-  animation: float 5s ease-in-out infinite;
 }
 
 section, .nav{
@@ -76,72 +71,37 @@ section, .nav{
   text-decoration: none;
   color: #EA4A88;
   padding: 14px 20px;
-  border-radius: 20px;
   margin-right: 25px;
   position: relative;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 24px;
   cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid;
 }
 
-  .nav_button:active,
-  .nav_button.active{
+  .nav_button:active, 
+  .nav_button.active {
     background: transparent;
-    text-decoration: none;
     color: #fff;
-    position: relative;
-    font-weight: 700;
-    border: 1px solid #fff;
+    border: none;
   }
 
-  .nav_button:not(.active):before{
+  .nav_button.active:not(:active) {
+    background: #EA4A88;
+    color: #fff;
+  }
+
+  .nav_button:not(.active):before, 
+  .nav_button:active:before{
     content: '';
     position: absolute;
     left: 4px;
     top: 4px;
     min-width: 100%;
     height: 100%;
-    border-radius: 20px;
-    background: #e7dbeb;
+    background: #EA4A88;
     z-index: -1;
-  }
-  .nav:not(.active) .nav_button {
-    font-size: 1.4em;
-    padding: 0.4em 0.8em;
-    border-radius: 18px;
-  }
-  .nav:not(.active) .nav_button:before {
-    border-radius: 18px;
-  }
-.nav.active .click-me {display:none;}
-.click-me {
-  background: #EA4A88;
-  color: #fff;
-  padding: 5px 10px 8px 10px;
-  height: max-content;
-  vertical-align: middle;
-  line-height: 0.8em;
-  font-size: 0.8em;
-  text-transform: lowercase;
-  position: absolute;
-  margin-top: 68px;
-  border-radius: 3px;
-  box-shadow: 2px 2px white;
-}
-  .click-me:before, .click-me:after {
-    content: '';
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border: 8px solid transparent;
-    border-bottom: 8px solid #EA4A88;
-    top: -15px;
-    left: 6px;
-  }
-  .click-me:before {
-    border-bottom: 8px solid white;
-    left: 8px;
-    top: -15px;
-    z-index:-1;
   }
 
 .hidden {
@@ -159,18 +119,15 @@ section.content-box{
   margin-top: 15px;
   max-width: 600px;
   min-width: 300px;
-  border-radius: 0 20px;
+  border-radius: 0 9px;
   min-height: 200px;
   align-self: flex-start;
+  border: 2px solid #333;
 }
 
-  section.content-box:not(.inverted){
-    background: #fff;
-  }
-
   section.content-box h2{
-    font-size: 0.8em;
     color: #B79DEB;
+    font-size: 1em;
   }
 
   section.content-box p{
@@ -189,17 +146,6 @@ section.content-box{
     margin-bottom:0.8em;
   }
 
-  .inverted{
-    background: none;
-    color: #fff;
-  }
-    .inverted h1{
-      text-align: center;
-    }
-
-    .inverted a{
-      color:#fff;
-    }
 
   .content-box ul {
     margin-top: 0px;
@@ -222,7 +168,6 @@ a {
   color: #B79DEB;
   font-weight: bolder;
   text-decoration: none;
-  text-transform: uppercase;
 }
   a:hover {
     color: #EA4A88;
@@ -245,12 +190,10 @@ p a:before, p a:after{
   margin: 3em auto;
 }
 .about-me > div{
-  color: #fff;
+  color: #333;
   padding: 4% 5% 5% 4%;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  min-height: 150px;
-  box-shadow: 5px 5px #fff;
+  border: 2px solid #222;
+  box-shadow: 5px 5px #222;
 }
   .about-me h1 {
     margin-bottom: 10px;
@@ -260,9 +203,9 @@ p a:before, p a:after{
     height: 100px;
     border-radius: 100%;
     float: left;
-    background: #fff;
+    background: #222;
     margin-right: 20px;
-    border: 2px solid #fff;
+    border: 2px solid #222;
   }
   .about-me p{
     text-transform: initial;
@@ -271,9 +214,16 @@ p a:before, p a:after{
     padding-top:10px;
   }
   .about-me .social img{
-    width:6%;
-    height:6%;
-    margin:auto 1%;
+    width: 100%;
+    margin: auto 1%;
+  }
+  .about-me .social a {
+    background: #EA4A88;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 3;
+    padding: 5px;
   }
 
   @media only screen
@@ -300,42 +250,33 @@ p a:before, p a:after{
       .nav_button.active {
         border-width: 5px;
       }
-      body .nav_button, 
-      body .nav_button:not(.active):before,
-      .nav:not(.active) .nav_button,
-      .nav:not(.active) .nav_button:before {
-        border-radius: 40px;
-      }
       .nav:not(.active) {
-        margin-bottom: 2.5em;
+        margin-bottom: 1em;
       }
-      .nav:not(.active) .nav_button {
+      .nav .nav_button {
         font-size: 52px;
         padding: 2.3%;
-      }
-      .click-me {
-        margin-top: 130px;
-        padding: 0.5em;
-        box-shadow: 6px 6px white;
       }
       body .about-me{
         width: 90%;
         margin: 1em;
+        font-size: 32px;
       }
       .about-me > div {
         border-width: 6px;
-        box-shadow: 8px 8px #fff;
-      }
-      body .about-me h1{
-        font-size: 70px;
+        box-shadow: 8px 8px #222;
       }
       body .about-me .photo img{
         height: 200px;
         width: 200px;
       }
-      .about-me .social img {
-        height: 10%;
-        width: 10%;
+      .about-me .social {
+        text-align: center;
+      }
+      .about-me .social a {
+        height: 100px;
+        width: 100px;
+        vertical-align: text-top;
       }
       .overlay.active > div {
         max-width: 99%;
@@ -345,26 +286,4 @@ p a:before, p a:after{
         border-width: 4px;
       }
 
-}
-
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-10px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-@keyframes shrink {
-  0% {
-    font-size: 32px;
-  }
-  100% {
-    font-size: 18px;
-  }
 }
