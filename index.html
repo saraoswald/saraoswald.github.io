@@ -24,6 +24,18 @@
     </div>
     <div class="content-cont" id="developer">
         <section class="content-box">
+            <h1>Macro Scenarios Widget</h1>
+            <p>This widget gives the ability to calculate outcomes from financial models for multiple scenarios at once, as opposed to calculating each company separately. The user inputs various macroeconomic factors, and this widget provides generated
+                model output, industry and country benchmarks, and integration with the LSM model.</p>
+            <p>The user has the ability to provide an infinite amount of scenarios, compared against a control (left) and weighted average (far right). There are arrows to shift left and right between scenarios, and the dots at the bottom indicate to the
+                user where they are.</p>
+            <p>All of the Highcharts graphs are synchronized by legend filtering and relative bar heights, and they aren't rendered until they are visible on the page. The first point is accomplished by calculating the relative maximum of all the data points
+                on load, and the second point by rendering indexes 0, 1, and 2, and waiting until the user clicks the right arrow to render graphs at indexes > 3.</p>
+            <img src="files\CIQ_Macro-Widget.png" class="has-overlay wide">
+            <div class="caption">Macro Scenarios Widget from Credit Analytics on the S&P Capital IQ platform.</div>
+            <p>This widget was built with ES6 (Babel), LESS, Handlebars. If I had more time I would've build this with CSS Grid instead of <code>&lt;table&gt;</code>, so that I could add better CSS animations as the user flips horizontally through scenarios.</p>
+        </section>
+        <section class="content-box">
             <h1>Minigames</h1>
             <h2>JavaScript</h2>
             <p></p>
@@ -84,6 +96,20 @@
     </div>
 
     <div class="content-cont" id="designer">
+        <section class="content-box">
+            <h1>CIQ Settings Dialog</h1>
+            <p>This is a great example of how difficult it can be to transform complicated business logic into something the user will understand intuitively. I believe that communicating business logic is more effective through thoughtful UXD than it is
+                through blocks of text.</p>
+            <p>After we added a "Basic" (simplified) view of different widgets and pages, we needed a place to toggle that setting for each individual piece.</p>
+            <p>We decided to reuse an old settings dialog, which previously had a checkbox to apply a special template to various widgets. Since we were adding not only a new setting but also new widgets that weren't affected by the old templating, I landed
+                on radio buttons.</p>
+            <img src="files\CIQ_Credit-Profile.png" class="has-overlay">
+            <div class="caption">User Settings dialog from the S&P Capital IQ platform, built with Vanilla JS.</div>
+            <p>The user had to be able to batch-apply settings, but they also needed a handy discription of each "View". We gave the user large buttons at the top of the dialog, while still allowing the user to toggle each setting individually.</p>
+            <p>The radio buttons are all left aligned to emphasize the fact that the "None" option isn't available to all areas.</p>
+            <p>The biggest challenge of this project was the location of the dialog's code. Since it's on a platform dashboard, I didn't have access to any JS/CSS/HTML preprocessers. I had to write cross-browser JS and CSS animations without the safety net
+                of modern technologies like arrow functions and automatic polyfills.</p>
+        </section>
         <section class="content-box">
             <h1>User Experience Design @ GA</h1>
             <p>I participated in a week-long intensive class in UX Design at General Assembly in NYC. The class focused on an iterative design process, and at the end of the week we had produced high-fidelity wireframes in Sketch.</p>

@@ -36,6 +36,10 @@ body {
     padding: 20px;
 }
 
+.overlay.active>div.wide {
+    max-width: 90%;
+}
+
 .close-overlay {
     outline: none;
     position: absolute;
@@ -44,10 +48,10 @@ body {
     right: 11px;
     font-size: 1em;
     background: #fff;
-    color: #EA4A88;
+    color: var(--pink);
     cursor: pointer;
-    border: 2px solid #EA4A88;
-    box-shadow: 3px 3px #EA4A88;
+    border: 2px solid var(--pink);
+    box-shadow: 3px 3px var(--pink);
 }
 
 .overlay-content img {
@@ -69,7 +73,7 @@ body {
 
 section,
 .nav {
-    color: #EA4A88;
+    color: var(--pink);
     position: relative;
 }
 
@@ -83,7 +87,7 @@ section,
 .nav_button {
     background: transparent;
     text-decoration: none;
-    color: #EA4A88;
+    color: var(--pink);
     padding: 14px 20px;
     margin-right: 25px;
     position: relative;
@@ -91,12 +95,12 @@ section,
     font-size: 24px;
     cursor: pointer;
     text-transform: uppercase;
-    border: 2px solid #EA4A88;
+    border: 2px solid var(--pink);
     overflow: hidden;
 }
 
 .nav_button.active:not(:active) {
-    background: #EA4A88;
+    background: var(--pink);
     color: #fff;
 }
 
@@ -161,7 +165,7 @@ section.content-box img {
 section.content-box .caption {
     text-align: center;
     font-size: 0.9em;
-    color: #EA4A88;
+    color: var(--pink);
     margin-bottom: 0.8em;
 }
 
@@ -189,7 +193,7 @@ a {
 }
 
 a:hover {
-    color: #EA4A88;
+    color: var(--pink);
 }
 
 .centered {
@@ -245,7 +249,7 @@ p a:after {
 }
 
 .about-me .social a {
-    background: #EA4A88;
+    background: var(--pink);
     display: inline-block;
     width: 30px;
     height: 30px;
