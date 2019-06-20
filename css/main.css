@@ -150,6 +150,7 @@ section.content-box {
 section.content-box h2 {
     color: #B79DEB;
     font-size: 1em;
+    padding-bottom: 0.5em;
 }
 
 section.content-box p {

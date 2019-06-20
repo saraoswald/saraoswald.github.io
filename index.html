@@ -25,15 +25,17 @@
     <div class="content-cont" id="developer">
         <section class="content-box">
             <h1>Macro Scenarios Widget</h1>
-            <p>This widget gives the ability to calculate outcomes from financial models for multiple scenarios at once, as opposed to calculating each company separately. The user inputs various macroeconomic factors, and this widget provides generated
-                model output, industry and country benchmarks, and integration with the LSM model.</p>
+            <h2>JavaScript - LESS - Handlebars</h2>
+            <p>A part of the Credit Analytics suite, this widget gives the ability to calculate outcomes from financial models for multiple scenarios at once, as opposed to calculating each company separately. The user inputs various macroeconomic factors,
+                and this widget provides generated model output, industry and country benchmarks, and integration with the LSM model.</p>
             <p>The user has the ability to provide an infinite amount of scenarios, compared against a control (left) and weighted average (far right). There are arrows to shift left and right between scenarios, and the dots at the bottom indicate to the
                 user where they are.</p>
             <p>All of the Highcharts graphs are synchronized by legend filtering and relative bar heights, and they aren't rendered until they are visible on the page. The first point is accomplished by calculating the relative maximum of all the data points
                 on load, and the second point by rendering indexes 0, 1, and 2, and waiting until the user clicks the right arrow to render graphs at indexes > 3.</p>
             <img src="files\CIQ_Macro-Widget.png" class="has-overlay wide">
-            <div class="caption">Macro Scenarios Widget from Credit Analytics on the S&P Capital IQ platform.</div>
+            <div class="caption">Macro Scenarios Widget from Credit Analytics on the <a href="https://www.spglobal.com/marketintelligence/en/solutions/sp-capital-iq-platform" target="_blank">S&P Capital IQ platform.</a></div>
             <p>This widget was built with ES6 (Babel), LESS, Handlebars. If I had more time I would've build this with CSS Grid instead of <code>&lt;table&gt;</code>, so that I could add better CSS animations as the user flips horizontally through scenarios.</p>
+            <p class="centered"><a href="https://www.spglobal.com/marketintelligence/en/solutions/credit-analytics" target="_blank">More info on Credit Analytics here</a></p>
         </section>
         <section class="content-box">
             <h1>Minigames</h1>
