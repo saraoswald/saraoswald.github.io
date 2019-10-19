@@ -64,10 +64,11 @@ body {
 
 .name {
     font-weight: 700;
+    font-family: 'Lora', serif;
     font-style: italic;
     color: #333;
     text-align: center;
-    font-size: 52px;
+    font-size: 56px;
     margin-top: 20px;
 }
 
@@ -147,10 +148,20 @@ section.content-box {
     border: 2px solid #333;
 }
 
-section.content-box h2 {
+section.content-box:not(.article) h2 {
     color: #B79DEB;
     font-size: 1em;
     padding-bottom: 0.5em;
+}
+
+section.content-box.article h2 {
+    color: var(--pink);
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+section.content-box h3 {
+    color: #696969;
 }
 
 section.content-box p {
@@ -161,6 +172,7 @@ section.content-box p {
 
 section.content-box img {
     max-width: 100%;
+    margin-bottom: 10px;
 }
 
 section.content-box .caption {
@@ -193,16 +205,26 @@ a {
     text-decoration: none;
 }
 
+.name a {
+    color: #333;
+}
+
 a:hover {
     color: var(--pink);
+}
+
+pre {
+    color: #696969;
+    border: 1px solid #dadada;
+    padding: 20px;
 }
 
 .centered {
     text-align: center;
 }
 
-p a:before,
-p a:after {
+.content-box:not(.article) p a:before,
+.content-box:not(.article) p a:after {
     content: '\2726';
 }
 

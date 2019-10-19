@@ -1,0 +1,61 @@
+<!doctype html>
+
+<head>
+    <title>Sara Linsley</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/cbp8ksu.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700i&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="name"><a href="index.html">Sara Linsley</a></div>
+    <div class="content-cont" id="developer">
+        <section class="content-box article">
+            <h1>Getting Started Scripting in InDesign</h1>
+            <h3>This tutorial will cover how to start writing scripts to use on InDesign files.</h3>
+
+            <h2>Setup</h2>
+            <p>First, download <a href="https://code.visualstudio.com/">Visual Studio Code</a>, which is where you'll be writing all of your code. You'll also need to install the <a href="https://marketplace.visualstudio.com/items?itemName=renderTom.adobe-script-runner">Adobe Script Runner extension</a>.</p>
+            <p>By default, Adobe Script Runner is set up for After Effects. To configure it for InDesign, open Keyboard Shortcuts, search for "adobescriptrunner", and reset the keybinding for Command+R to be for InDesign. <a href="https://code.visualstudio.com/docs/getstarted/keybindings">Refer to this guide for help with binding keyboard shortcuts.</a></p>
+            <img src="./files/Keyboard-shortcuts.png">
+
+            <h2>Sample Script</h2>
+            <p>Now it's time to write your first script! Now's the time to make sure you have InDesign open.</p>
+            <p>Open a new text file (Command+N), and paste the script below into it.</p>
+            <pre>alert("Hello World")</pre>
+            <p>When you press Command+R, you should get this popup in InDesign.</p>
+            <img src="./files/ID-hello-world.png">
+            <p>And that's all there is to it! Happy coding!</p>
+        </section>
+    </div>
+    <div class="about-me">
+        <div>
+            <div class="photo">
+                <img src='./files/profpic.png'></img>
+            </div>
+            <p>
+                I'm a software developer and comic book letterer living in NYC. I have a CS degree from NYU and strong opinions on science fiction.
+            </p>
+            <div class="social">
+                <a href="https://codepen.io/saraoswald/" target="_blank"><img src="./files/codepen-logo.png"></img>
+                </a>
+                <a href="https://www.linkedin.com/in/saralinsley/" target="_blank"><img src="./files/linkedin-logo.png"></img>
+                </a>
+                <a href="https://twitter.com/salinsley" target="_blank"><img src="./files/twitter-logo.png"></img>
+                </a>
+                <a href="https://github.com/saraoswald" target="_blank"><img src="./files/GitHub-Mark.png" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div>
+            <button class="close-overlay">x</button>
+            <div class="overlay-content"></div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script>
+        init(false);
+    </script>
+</body>

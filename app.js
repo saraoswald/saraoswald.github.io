@@ -69,10 +69,12 @@ function handleOverlayClick(event) {
     moveOverlay();
 }
 
-function init() {
-    doHide();
+function doInit(isIndexPage) {
+    if (isIndexPage) doHide();
     $('.nav_button').on('click', toggleNav);
     $('.has-overlay').on('click', handleOverlayClick);
 }
 
-$(document).ready(init);
+function init(isIndexPage) {
+    $(document).ready(() => doInit(isIndexPage));
+}
