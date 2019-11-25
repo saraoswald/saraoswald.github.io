@@ -286,10 +286,12 @@ pre {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     body {
-        font-size: 52px;
+        font-size: 28px;
+        margin: 20px;
     }
     body .content-box {
         max-width: 90%;
+        border-width: 6px;
     }
     .name {
         font-size: 100px;
@@ -299,6 +301,7 @@ pre {
     }
     body .nav_button {
         padding: 2.3%;
+        border-width: 5px;
     }
     .nav_button.active {
         border-width: 5px;
@@ -310,26 +313,33 @@ pre {
         font-size: 52px;
         padding: 2.3%;
     }
-    body .about-me {
+    .about-me {
         width: 90%;
         margin: 1em;
-        font-size: 32px;
     }
     .about-me>div {
         border-width: 6px;
         box-shadow: 8px 8px #222;
     }
-    body .about-me .photo img {
+    .about-me .photo {
+        border-width: 6px;
+    }
+    .about-me .photo img {
         height: 200px;
         width: 200px;
     }
     .about-me .social {
         text-align: center;
+        padding-top: 1em;
     }
     .about-me .social a {
         height: 100px;
         width: 100px;
         vertical-align: text-top;
+        padding: 18px;
+    }
+    .about-me .social img {
+        vertical-align: middle;
     }
     .overlay.active>div {
         max-width: 99%;
