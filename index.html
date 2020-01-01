@@ -21,22 +21,9 @@
     </a>
     </div>
     <div class="content-cont hidden" id="developer">
-        <section class="content-box article">
-            <h1>Getting Started Scripting in InDesign</h1>
-            <h3>This tutorial will cover how set up the environment to start writing scripts to use in InDesign.</h3>
-
-            <h2>Setup</h2>
-            <p>First, download <a href="https://code.visualstudio.com/">Visual Studio Code</a>, which is where you'll be writing all of your code. You'll also need to install the <a href="https://marketplace.visualstudio.com/items?itemName=renderTom.adobe-script-runner">Adobe Script Runner extension</a>.</p>
-            <p>By default, Adobe Script Runner is set up for After Effects. To configure it for InDesign, open Keyboard Shortcuts, search for "adobescriptrunner", and reset the keybinding for Command+R to be for InDesign. <a href="https://code.visualstudio.com/docs/getstarted/keybindings">Refer to this guide for help with binding keyboard shortcuts.</a></p>
-            <img src="./files/Keyboard-shortcuts.png">
-
-            <h2>Sample Script</h2>
-            <p>Now it's time to write your first script! Now's the time to make sure you have InDesign open.</p>
-            <p>Open a new text file (Command+N), and paste the script below into it.</p>
-            <pre>alert("Hello World")</pre>
-            <p>When you press Command+R, you should get this popup in InDesign.</p>
-            <img src="./files/ID-hello-world.png">
-            <p>And that's all there is to it! Happy coding!</p>
+        <section class="content-box article mini">
+            <h1><a href="id-script-tutorial.html">Getting Started Scripting in InDesign</a></h1>
+            <p>This tutorial will cover how set up the environment to start writing scripts to use in InDesign.</p>
         </section>
         <section class="content-box">
             <h1>Macro Scenarios Widget</h1>
@@ -246,6 +233,6 @@
     </div>
     <script src="./app.js"></script>
     <script>
-        init(true);
+        init("index");
     </script>
 </body>

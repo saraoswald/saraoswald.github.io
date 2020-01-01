@@ -177,10 +177,14 @@ section.content-box {
     border: 2px solid #333;
 }
 
+section.content-box.mini {
+    width: 300px;
+}
+
 section.content-box:not(.article) h2 {
     color: #B79DEB;
     font-size: 1em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5rem;
 }
 
 section.content-box.article h2 {
@@ -201,14 +205,13 @@ section.content-box p {
 
 section.content-box img {
     max-width: 100%;
-    margin-bottom: 10px;
 }
 
 section.content-box .caption {
     text-align: center;
     font-size: 0.9em;
     color: var(--pink);
-    margin-bottom: 0.8em;
+    margin: 0.8em 0;
 }
 
 .content-box ul {
@@ -224,8 +227,7 @@ p {
 }
 
 h1 {
-    line-height: 1em;
-    padding-bottom: 15px;
+    padding-bottom: 0.5rem;
 }
 
 a {
