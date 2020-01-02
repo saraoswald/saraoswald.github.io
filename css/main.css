@@ -341,15 +341,18 @@ code {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     body {
-        font-size: 28px;
+        font-size: 40px;
         margin: 20px;
     }
     .content-cont {
         max-height: 10000px;
     }
-    body .content-box {
+    .content-box {
         max-width: 90%;
         border-width: 6px;
+    }
+    .content-box.mini {
+        width: 90%;
     }
     .name {
         font-size: 100px;
@@ -384,6 +387,10 @@ code {
     .about-me .photo img {
         height: 200px;
         width: 200px;
+    }
+    .about-me p {
+        width: 100%;
+        display: block;
     }
     .about-me .social {
         text-align: center;
