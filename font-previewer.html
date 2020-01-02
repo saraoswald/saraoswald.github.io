@@ -1,0 +1,102 @@
+<!doctype html>
+
+<head>
+    <title>Sara Linsley</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/cbp8ksu.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .preview-teko {
+            font-family: 'Teko', sans-serif;
+            font-size: 2em;
+            border: 1px solid #666;
+            padding: 0.25em 0.5em;
+            display: inline-block;
+            line-height: 1;
+        }
+        
+        .preview-teko.stacked {
+            max-width: 4em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body class="halftone-10K">
+    <div class="name"><a href="index.html">Sara Linsley</a></div>
+    <div class="content-cont" id="developer">
+        <section class="content-box article" date="Jan 2, 2020">
+            <h1>Building a Better Letterer Font Previewer</h1>
+            <p>I built a font previewing app better tailored to letterers' needs, using vanilla JS and the MyFont API.</p>
+            <p class="centered"><a href="https://font-preview.glitch.me/" target="_blank">See it in action here</a></p>
+            <p>Fonts are one of a designer's biggest expenses, ranging from a couple dollars to a couple thousand dollars. This is why it's very important for a designer to be able to get a feel for the font before making an investment.</p>
+            <h2>The Problem</h2>
+            <p>The font previewing services currently available only show text on one line, with no way to adjust the leading (space between lines) and horizontal scale.</p>
+            <p>Fonts that might look good in a long body of copy might not look so great in all-caps stacked in a comic balloon.</p>
+            <p>Take for example Teko, which has a condensed and blocky look that might be useful in manga lettering.</p>
+            <p class="preview-teko">I can't wait for the basketball game!</p>
+            <p>When it's presented as a single line, it looks fine. When it's made to be all caps (a standard in comic books) and the words are stacked, you can see it's too dense to be legible at smaller sizes.</p>
+            <p class="preview-teko stacked">I can't wait for the basketball game!</p>
+            <p>This is the kind of distortion that's useful to letterers, but it's difficult to accomplish with current font previewers.</p>
+
+            <h2>The Solution</h2>
+            <p>So I made my own font previewer.</p>
+            <a href="https://font-preview.glitch.me/" target="_blank"><img src="./files/font-previewer-screencap.png"></a>
+            <p>Users can toggle between uppercase and mixed case, change the font size and leading, and even adjust the horizontal scale of the characters.</p>
+            <p>I decided to target Comicraft fonts as a proof of concept, ahead of their annual New Year's Day sale.</p>
+            <p>Unlike, say, Google Fonts, Comicraft fonts have strict licenses that limit how many people can have access to the font file. This means that the fonts can only be served as a static image, to prevent people from simply saving the font as it's
+                sent as a WOFF. I don't personally have licenses to all these fonts, so I decided to borrow the API from MyFonts.</p>
+            <p>Let's take the first line of the example above and break it down.</p>
+            <pre>&lt;img src=&quot;https://render.myfonts.net/fonts/font_rend.php?id=2aeecfe55776722bfa8ecc237af4c55a&amp;amp;rt=I can't&amp;amp;rs=50&amp;amp;w=1376&amp;amp;sc=1&quot;&gt;</pre>
+            <p>The <strong>id</strong> of the font is <strong>2aeecfe55776722bfa8ecc237af4c55a</strong>.</p>
+            <p>The <strong>rt</strong> (user-provided text) is <strong>I can't</strong>.</p>
+            <p>The <strong>rs</strong> (font size) is <strong>50</strong>.</p>
+            <p>This API requires an explicit width, so I give it the width of the current container. And that gives us:</p>
+            <img src="https://render.myfonts.net/fonts/font_rend.php?id=2aeecfe55776722bfa8ecc237af4c55a&amp;rt=I can't&amp;rs=50&amp;w=1376&amp;sc=1">
+            <p>I repeat this for each line, et voilà!</p>
+            <p>To adjust the leading, I change the margin between lines. To adjust the horizontal scale, I adjust the width of all the images. To toggle "All Caps", I have to refresh all of the lines with the text altered accordingly.</p>
+
+            <h2>Current Issues</h2>
+            <h3>Centered Text</h3>
+            <p>Since this API requires an explicit output width, and all of the characters are of variable width, it's not possible to center-align the text.</p>
+
+            <h3>Ligatures and auto-crossbar</h3>
+            <p>Some fonts have the technology to swap glyphs based on context. For example, the Comicrazy that I have installed on my computer changes all personal-pronoun I's to have crossbars on top and bottom. This API returns literally which glyphs you
+                provide, so you wind up with the normal I glyph.</p>
+            <img src="https://render.myfonts.net/fonts/font_rend.php?id=31594193b6740f1cadcd0c487daddb1a&amp;rt=I can't even!&amp;rs=28&amp;w=300&amp;sc=1">
+            <h3>More weird glyphs</h3>
+            <p>The lowercase i glyph in particular has a lot of trouble. This is especially noticable in Samaritan Tall Lower:</p>
+            <img src="https://render.myfonts.net/fonts/font_rend.php?id=98927c60d0d504fa4003beb5b501509b&amp;rt=Samaritan+Tall+Lower+Regular&amp;rs=28&amp;w=500&amp;sc=1&amp;nie=true&amp;ft=ccmp%2Cmark%2Cmkmk%2Cliga%2Cclig%2Ckern%2Cpalt&amp;nf=1">
+        </section>
+    </div>
+    <div class="about-me has-before">
+        <div class="photo">
+            <img src='./files/profpic.png'></img>
+        </div>
+        <p>
+            I'm a software developer and comic book letterer living in NYC. I have a CS degree from NYU and strong opinions on science fiction.
+        </p>
+        <div class="social">
+            <a href="https://codepen.io/saraoswald/" target="_blank"><img src="./files/codepen-logo.png"></img>
+            </a>
+            <a href="https://www.linkedin.com/in/saralinsley/" target="_blank"><img src="./files/linkedin-logo.png"></img>
+            </a>
+            <a href="https://twitter.com/salinsley" target="_blank"><img src="./files/twitter-logo.png"></img>
+            </a>
+            <a href="https://github.com/saraoswald" target="_blank"><img src="./files/GitHub-Mark.png" /></a>
+        </div>
+    </div>
+    <div class="overlay">
+        <div>
+            <button class="close-overlay">x</button>
+            <div class="overlay-content"></div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script>
+        init("article");
+    </script>
+</body>

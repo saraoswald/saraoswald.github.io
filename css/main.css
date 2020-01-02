@@ -168,7 +168,7 @@ section.content-box {
     background: #fff;
     padding: 25px 35px;
     margin-right: 20px;
-    margin-top: 15px;
+    margin-top: 2em;
     max-width: 600px;
     min-width: 300px;
     border-radius: 0 9px;
@@ -200,7 +200,7 @@ section.content-box h3 {
 section.content-box p {
     color: #696969;
     text-transform: initial;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
 }
 
 section.content-box img {
@@ -216,6 +216,16 @@ section.content-box .caption {
 
 .content-box ul {
     margin-top: 0px;
+}
+
+.content-box[date]:before {
+    content: attr(date);
+    background: black;
+    color: #fff;
+    position: absolute;
+    top: -2.8em;
+    padding: 1em 1.5em;
+    z-index: -2;
 }
 
 h1,
@@ -244,18 +254,23 @@ a:hover {
     color: var(--pink);
 }
 
-pre {
+pre,
+code {
     color: #696969;
     border: 1px solid #dadada;
     padding: 20px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
 }
 
 .centered {
     text-align: center;
 }
 
-.content-box:not(.article) p a:before,
-.content-box:not(.article) p a:after {
+.content-box p.centered a:before,
+.content-box p.centered a:after {
     content: '\2726';
 }
 
