@@ -258,6 +258,10 @@ pre,
 code {
     color: #696969;
     border: 1px solid #dadada;
+}
+
+pre:not(.inline),
+code:not(.inline) {
     padding: 20px;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
