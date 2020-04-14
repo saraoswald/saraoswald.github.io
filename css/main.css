@@ -329,7 +329,7 @@ code:not(.inline) {
 
 .about-me .social a {
     background: var(--pink);
-    display: inline-block;
+    display: inline-flex;
     width: 30px;
     height: 30px;
     line-height: 3;
