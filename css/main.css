@@ -310,7 +310,7 @@ code:not(.inline) {
     border-radius: 100%;
     float: left;
     background: #222;
-    margin-right: 20px;
+    margin-right: 1em;
     border: 2px solid #222;
 }
 
@@ -361,6 +361,9 @@ code:not(.inline) {
     .name {
         font-size: 100px;
     }
+    .name svg {
+        width: 50%;
+    }
     body .nav {
         max-width: 100%;
     }
@@ -380,6 +383,7 @@ code:not(.inline) {
     }
     .about-me {
         width: 78%;
+        margin: 0.1em;
     }
     .about-me {
         border-width: 6px;
