@@ -51,7 +51,7 @@ function openOverlay() {
 
 function moveOverlay() {
     const $overlay = $('.overlay > div');
-    const bottom = $('body').height() - window.outerHeight - $overlay.outerHeight();
+    const bottom = $('body').height() - $overlay.outerHeight();
     const newCoord = window.scrollY;
     const yCoord = newCoord > bottom ?
         bottom :

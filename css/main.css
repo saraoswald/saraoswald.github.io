@@ -329,7 +329,7 @@ code:not(.inline) {
 
 .about-me .social a {
     background: var(--pink);
-    display: inline-flex;
+    display: inline-block;
     width: 30px;
     height: 30px;
     line-height: 3;
@@ -343,17 +343,19 @@ code:not(.inline) {
 
 /* mobile */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     body {
         font-size: 40px;
         margin: 20px;
     }
     .content-cont {
-        max-height: 10000px;
+        max-height: 30000px;
     }
     .content-box {
-        max-width: 90%;
-        border-width: 6px;
+        width: 100%;
+        max-width: none !important;
+        margin: 0 auto 1em auto !important;
+        border-width: 4px !important;
     }
     .content-box.mini {
         width: 90%;
@@ -411,7 +413,11 @@ code:not(.inline) {
         padding: 18px;
     }
     .about-me .social img {
-        vertical-align: middle;
+        vertical-align: text-bottom;
+    }
+    .overlay.active {
+        width: auto;
+        left: -20px;
     }
     .overlay.active>div {
         max-width: 99%;
@@ -420,9 +426,9 @@ code:not(.inline) {
     .close-overlay {
         border-width: 4px;
         font-size: 2em;
-        width: 1.5em;
-        height: 1.5em;
-        position: relative;
+        width: 1.25em;
+        height: 1.25em;
+        position: absolute !important;
         margin-bottom: 1em;
         float: right;
     }
